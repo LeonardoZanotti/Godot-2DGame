@@ -1,6 +1,7 @@
 extends Actor
 
 func _ready() -> void:
+	set_physics_process(false)
 	_velocity.x = -_speed.x
 
 func _physics_process(delta: float) -> void:
