@@ -6,14 +6,14 @@
 [ext_resource path="res://assets/background.png" type="Texture" id=4]
 [ext_resource path="res://src/Scenes/Materials/Coin.tscn" type="PackedScene" id=5]
 
-[sub_resource type="NavigationPolygon" id=5]
+[sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 
-[sub_resource type="OccluderPolygon2D" id=6]
+[sub_resource type="OccluderPolygon2D" id=2]
 polygon = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 
-[sub_resource type="ConvexPolygonShape2D" id=7]
+[sub_resource type="ConvexPolygonShape2D" id=3]
 points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 
 [sub_resource type="TileSet" id=4]
@@ -24,19 +24,19 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 0/region = Rect2( 0, 0, 64, 64 )
 0/tile_mode = 0
 0/occluder_offset = Vector2( 0, 0 )
-0/occluder = SubResource( 6 )
+0/occluder = SubResource( 2 )
 0/navigation_offset = Vector2( 0, 0 )
-0/navigation = SubResource( 5 )
+0/navigation = SubResource( 1 )
 0/shape_offset = Vector2( 0, 0 )
 0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape = SubResource( 7 )
+0/shape = SubResource( 3 )
 0/shape_one_way = false
 0/shape_one_way_margin = 1.0
 0/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 7 ),
+"shape": SubResource( 3 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 0/z_index = 0
@@ -82,30 +82,30 @@ limit_right = 3104
 limit_bottom = 1152
 
 [node name="Enemy" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1437, 559 )
+position = Vector2( 1801, 378 )
 
 [node name="Enemy2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1557, 486 )
+position = Vector2( 2744, 486 )
 
 [node name="Enemy3" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1696, 426 )
+position = Vector2( 2157, 411 )
 
 [node name="Enemy4" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1819, 378 )
+position = Vector2( 80, 486 )
 
 [node name="Enemy5" parent="." instance=ExtResource( 3 )]
 position = Vector2( 805, 443 )
 
 [node name="Coin" parent="." instance=ExtResource( 5 )]
-position = Vector2( 404, 542 )
+position = Vector2( 2771, 454 )
 
 [node name="Coin2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 471, 542 )
+position = Vector2( 2721, 454 )
 
 [node name="Coin3" parent="." instance=ExtResource( 5 )]
-position = Vector2( 535, 542 )
+position = Vector2( 2821, 454 )
 
 [node name="Coin4" parent="." instance=ExtResource( 5 )]
-position = Vector2( 2769, 469 )
+position = Vector2( 788, 400 )
 
 [editable path="Player"]
