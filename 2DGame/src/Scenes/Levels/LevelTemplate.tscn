@@ -54,8 +54,7 @@ layer = -100
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
 anchor_right = 1.0
 anchor_bottom = 1.033
-margin_left = -0.396851
-margin_right = 1919.6
+margin_right = 1920.0
 margin_bottom = 1116.36
 texture = ExtResource( 4 )
 __meta__ = {
