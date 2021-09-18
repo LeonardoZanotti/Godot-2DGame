@@ -20,7 +20,8 @@ _global_script_class_icons={
 
 [application]
 
-config/name="First 2D Game"
+config/name="Slime Hunter"
+run/main_scene="res://src/Scenes/Levels/LevelTemplate00.tscn"
 config/icon="res://icon.png"
 
 [display]
