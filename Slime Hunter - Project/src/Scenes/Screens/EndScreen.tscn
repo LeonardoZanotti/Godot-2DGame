@@ -1,17 +1,17 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/Scenes/UserInterface/ChangeSceneButton.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Scenes/UserInterface/QuitButton.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/background.png" type="Texture" id=3]
-[ext_resource path="res://src/Scripts/PlayButton.gd" type="Script" id=4]
+[ext_resource path="res://src/Scripts/EndScreen.gd" type="Script" id=4]
 [ext_resource path="res://assets/ui_theme.tres" type="Theme" id=5]
-[ext_resource path="res://src/Scripts/QuitButton.gd" type="Script" id=6]
 [ext_resource path="res://src/Scenes/UserInterface/Title.tscn" type="PackedScene" id=7]
 
 [node name="EndScreen" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 5 )
+script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -51,27 +51,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="PlayAgainButton" type="Button" parent="Menu" instance=ExtResource( 1 )]
-margin_right = 648.0
-margin_bottom = 128.0
-size_flags_vertical = 3
+[node name="PlayAgainButton" parent="Menu" instance=ExtResource( 1 )]
+anchor_top = 0.0
+anchor_bottom = 0.0
 text = "Play again"
-script = ExtResource( 4 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 next_scene_path = "res://src/Scenes/Screens/MainScreen.tscn"
 
-[node name="QuitButton" type="Button" parent="Menu" instance=ExtResource( 2 )]
+[node name="QuitButton" parent="Menu" instance=ExtResource( 2 )]
 margin_top = 132.0
-margin_right = 648.0
 margin_bottom = 260.0
-size_flags_vertical = 3
-text = "Quit"
-script = ExtResource( 6 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label" type="Label" parent="."]
 anchor_left = 0.5
@@ -85,6 +73,3 @@ margin_bottom = -197.352
 text = "Your final score is %s
 You died times %s"
 align = 1
-
-[connection signal="button_up" from="Menu/PlayAgainButton" to="Menu/PlayAgainButton" method="_on_PlayButton_button_up"]
-[connection signal="button_up" from="Menu/QuitButton" to="Menu/QuitButton" method="_on_QuitButton_button_up"]
