@@ -5,6 +5,8 @@ onready var paused_overlay: ColorRect = get_node("PauseOverlay")
 onready var scoreLabel: Label = get_node("Label")
 onready var pauseTitleLabel: Label = get_node("PauseOverlay/Title")
 
+const DIED_MESSAGE = "You died"
+
 var paused = false setget set_paused
 
 func _ready() -> void:
@@ -13,7 +15,7 @@ func _ready() -> void:
 	update_interface()
 
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("pause"):
+	if event.is_action_pressed("pause") and pauseTitleLabel.text != DIED_MESSAGE:
 		self.paused = not paused
 		scene_tree.set_input_as_handled()
 
@@ -27,5 +29,5 @@ func update_interface() -> void:
 
 func _PlayerData_player_died() -> void:
 	self.paused = true
-	pauseTitleLabel.text = "You died"
+	pauseTitleLabel.text = DIED_MESSAGE
 	
