@@ -3,6 +3,7 @@ extends Control
 onready var scene_tree := get_tree()
 onready var paused_overlay: ColorRect = get_node("PauseOverlay")
 onready var scoreLabel: Label = get_node("Label")
+onready var pauseTitleLabel: Label = get_node("PauseOverlay/Title")
 
 var paused = false setget set_paused
 
@@ -23,3 +24,8 @@ func set_paused(value: bool) -> void:
 
 func update_interface() -> void:
 	scoreLabel.text = "Score: %s" % PlayerData.score
+
+func _PlayerData_player_died() -> void:
+	self.paused = true
+	pauseTitleLabel.text = "You died"
+	
