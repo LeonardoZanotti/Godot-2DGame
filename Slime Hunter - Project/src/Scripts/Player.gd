@@ -39,6 +39,6 @@ func calculate_stomp_velocity(linear_velocity: Vector2, impulse: float) -> Vecto
 	new_velocity.y = -impulse
 	return new_velocity
 
-func die() -> voie:
+func die() -> void:
 	PlayerData.deaths += 1
 	queue_free()

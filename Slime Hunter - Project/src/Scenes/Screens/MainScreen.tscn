@@ -48,3 +48,5 @@ anchor_bottom = 0.0
 next_scene_path = "res://src/Scenes/Levels/LevelTemplate00.tscn"
 
 [node name="QuitButton" parent="Menu" instance=ExtResource( 2 )]
+margin_top = 132.0
+margin_bottom = 260.0

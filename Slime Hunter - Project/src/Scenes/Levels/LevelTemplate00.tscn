@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://src/Scenes/Materials/Portal.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Scenes/Actors/Enemy.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://assets/background.png" type="Texture" id=5]
 [ext_resource path="res://assets/tileset.png" type="Texture" id=6]
 [ext_resource path="res://src/Scenes/Levels/LevelTemplate01.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/Scenes/UserInterface/PauseMenu.tscn" type="PackedScene" id=8]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
@@ -49,6 +50,10 @@ __meta__ = {
 "_edit_horizontal_guides_": [ 1152.0 ],
 "_edit_vertical_guides_": [ 3808.0 ]
 }
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer2" instance=ExtResource( 8 )]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -100
